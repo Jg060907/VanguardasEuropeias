@@ -1,4 +1,3 @@
-
 h2, h3 {
     text-align: center;
     font-family: "Century Gothic", sans-serif;
@@ -25,8 +24,7 @@ h2, h3 {
     margin: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 400px; /* Limita a largura do card */
-    max-height: 1100px;
-    height: 1100px;
+    min-height: 500px; /* Altura mínima para manter o padrão */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +44,10 @@ h2, h3 {
 }
 
 .saibamais img, .imagenss img, .saibamais1 img {
-    border-radius: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-height: 300px; /* Limita a altura das imagens */
+    object-fit: cover; /* Mantém a proporção das imagens */
 }
 
 .txt {
@@ -63,7 +64,6 @@ h2, h3 {
 .beijo {
     color: darkorange;
 }
-
 
 .button {
     display: inline-block;
@@ -103,21 +103,6 @@ h2, h3 {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 40px;
-    }
-
-    .card {
-        margin: 20px auto;
-        width: 90%;
-    }
-
-    .saibamais, .obras, .obras2, .Fontes {
-        flex-direction: column;
-    }
-}
-
 .cards {
     display: flex;
     justify-content: space-around;
@@ -127,9 +112,8 @@ h2, h3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 470px;
-    max-height: 470px;
-
+    height: 300px;
+    object-fit: cover;
 }
 
 .card a {
@@ -168,17 +152,11 @@ h2, h3 {
     margin: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 1100px; /* Limita a largura do card */
-    max-height: 400px;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card1:hover {
@@ -188,11 +166,13 @@ h2, h3 {
 
 .saibamais1 img {
     height: 400px;
-    width: 330px;
-    margin-right: 5px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .Cabeçalho {
+    display: flex;
+    flex-direction: column;
     color: #000000;
     text-align: center;
     font-size: 30px;
@@ -203,6 +183,7 @@ h2, h3 {
     margin-top: 40px;
     border-radius: 10px;
     align-items: center;
+    justify-content: center;
 }
 
 .Cabeçalho p {
@@ -215,4 +196,78 @@ h2, h3 {
 
 .Cabeçalho h1 {
     margin-top: 10px;
+}
+
+.saibamais1 .card1 div {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .Home {
+        align-items: center;
+    }
+
+    .cards, .cabeçalho, .card1 {
+        flex-direction: column;
+    }
+
+    .cards1 a {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .cards1 {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .saibamais1 img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .card1, .cabeçalho {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        margin: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 400px; /* Limita a largura do card */
+        min-height: 500px; /* Altura mínima para manter o padrão */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .saibamais1, .cabeçalho {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .card, .card1 {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .saibamais, .obras, .obras2, .Fontes, .saibamais1, .cabeçalho {
+        flex-direction: column;
+    }
+
+    .saibamais1 .card1 div {
+        width: 100%;
+        height: 100%;
+    }
 }
