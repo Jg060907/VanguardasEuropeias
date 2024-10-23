@@ -198,6 +198,10 @@ h2, h3 {
     margin-top: 10px;
 }
 
+.linha {
+    border-top: 2px solid #ffffff;
+}
+
 .saibamais1 .card1 div {
     width: 50%;
 }
@@ -205,6 +209,15 @@ h2, h3 {
 @media (max-width: 768px) {
     .Home {
         align-items: center;
+    }
+
+    .Cabeçalho {
+        margin-bottom: 55px;
+    }
+
+    .Cabeçalho, .card, .card1 {
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .cards, .cabeçalho, .card1 {
@@ -231,7 +244,7 @@ h2, h3 {
         object-fit: cover;
     }
 
-    .card1, .cabeçalho {
+    .card1 {
         background-color: #fff;
         padding: 20px;
         border-radius: 15px;
@@ -247,7 +260,6 @@ h2, h3 {
 
     .saibamais1, .cabeçalho {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
         gap: 20px;
         align-items: center;
@@ -255,11 +267,6 @@ h2, h3 {
 
     h1 {
         font-size: 40px;
-    }
-
-    .card, .card1 {
-        margin: 20px auto;
-        width: 90%;
     }
 
     .saibamais, .obras, .obras2, .Fontes, .saibamais1, .cabeçalho {
